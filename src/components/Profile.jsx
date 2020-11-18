@@ -8,7 +8,7 @@ const Container = styled.div`
   padding-top: 15px;
   margin: 0 auto;
   width: 300px;
-  box-shadow: 0 0 2px 2px rgba(39, 39, 39, 0.3);
+  box-shadow: 0 0 2px 2px rgba(39, 39, 39, 0.2);
 `;
 
 const Description = styled.div`
@@ -35,8 +35,11 @@ const NameTitle = styled.p`
 `;
 const TagText = styled.p`
   font-size: 25px;
-  font-style: italic;
   margin-bottom: 15px;
+`;
+
+const LocationText = styled.p`
+  font-style: oblique;
 `;
 
 const List = styled.ul`
@@ -70,18 +73,12 @@ const ListItem = styled.li`
   }
 `;
 
-const LocationText = styled.p``;
-
 const Label = styled.span`
   display: block;
   margin-bottom: 5px;
 `;
 
-const FollowersQuantity = styled.span``;
-
-const ViewsQuantity = styled.span``;
-
-const LikesQuantity = styled.span``;
+const Quantity = styled.span``;
 
 export default function Profile({ name, tag, location, avatar, stats }) {
   return (
@@ -106,15 +103,15 @@ export default function Profile({ name, tag, location, avatar, stats }) {
           <List className="stats">
             <ListItem>
               <Label>Followers:</Label>
-              <FollowersQuantity>{stats.followers}</FollowersQuantity>
+              <Quantity>{stats.followers}</Quantity>
             </ListItem>
             <ListItem>
               <Label>Views:</Label>
-              <ViewsQuantity>{stats.views}</ViewsQuantity>
+              <Quantity>{stats.views}</Quantity>
             </ListItem>
             <ListItem>
               <Label>Likes:</Label>
-              <LikesQuantity>{stats.likes}</LikesQuantity>
+              <Quantity>{stats.likes}</Quantity>
             </ListItem>
           </List>
         </Container>

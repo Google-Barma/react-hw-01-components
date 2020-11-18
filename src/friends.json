@@ -1,0 +1,32 @@
+[
+  {
+    "avatar": "https://pressa.tv/uploads/posts/2017-10/1508903985_r1.jpg",
+    "name": "Mango",
+    "isOnline": true,
+    "id": 1812
+  },
+  {
+    "avatar": "https://i.pinimg.com/originals/1a/9d/6f/1a9d6fbc9c1fbc304afdaefdde1c73e3.jpg",
+    "name": "Kiwi",
+    "isOnline": false,
+    "id": 1137
+  },
+  {
+    "avatar": "https://img11.postila.ru/resize?w=540&src=%2Fdata%2Fc0%2Fa9%2Fab%2F55%2Fc0a9ab55f2ee1ec08401ea11cfcdb13327565a860c530b061f57181573cd08ac.jpg",
+    "name": "Ajax",
+    "isOnline": true,
+    "id": 1213
+  },
+  {
+    "avatar": "https://i.pinimg.com/736x/10/d4/5e/10d45e8efc0753f59d388b36109e3da3.jpg",
+    "name": "Jay",
+    "isOnline": true,
+    "id": 1714
+  },
+  {
+    "avatar": "https://img11.postila.ru/data/2f/71/47/40/2f7147400505b7341a3d2f1b913f55b9747b06fe16cc3a14c05b0814a3c42b80.jpg",
+    "name": "Poly",
+    "isOnline": false,
+    "id": 1284
+  }
+]

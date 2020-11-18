@@ -1,13 +1,15 @@
 import React from "react";
 import Profile from "./Profile";
 import Statistics from "./Statistics";
+import FriendList from "./FriendList";
 
 import user from "../user.json";
 import statisticalData from "../statistical-data.json";
+import friendsList from "../friends.json";
 
 const { name, tag, location, avatar, stats } = user;
 
-console.log(statisticalData);
+console.log(friendsList);
 
 export default function App() {
   return (
@@ -21,6 +23,8 @@ export default function App() {
       />
 
       <Statistics title="Upload stats" stats={statisticalData} />
+
+      <FriendList friends={friendsList} />
     </>
   );
 }
