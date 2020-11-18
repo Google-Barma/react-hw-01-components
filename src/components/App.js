@@ -7,6 +7,8 @@ import statisticalData from "../statistical-data.json";
 
 const { name, tag, location, avatar, stats } = user;
 
+console.log(statisticalData);
+
 export default function App() {
   return (
     <>
@@ -18,7 +20,7 @@ export default function App() {
         tag={tag}
       />
 
-      <Statistics title="Upload stats" />
+      <Statistics title="Upload stats" stats={statisticalData} />
     </>
   );
 }
