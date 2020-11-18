@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Profile from "./Profile";
 import Statistics from "./Statistics";
 import FriendList from "./FriendList";
@@ -11,11 +12,13 @@ import transactions from "../transactions.json";
 
 const { name, tag, location, avatar, stats } = user;
 
-console.log(transactions);
+const Background = styled.div`
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/webb.png");
+`;
 
 export default function App() {
   return (
-    <>
+    <Background>
       <Profile
         avatar={avatar}
         name={name}
@@ -29,6 +32,6 @@ export default function App() {
       <FriendList friends={friendsList} />
 
       <TransactionHistory items={transactions} />
-    </>
+    </Background>
   );
 }

@@ -8,6 +8,7 @@ const Section = styled.section`
 const Table = styled.table`
   margin: 0 auto;
   width: 500px;
+  box-shadow: 0 0 2px 2px rgba(39, 39, 39, 0.2);
 `;
 const Thead = styled.thead`
   background-color: #4df3ff;
@@ -19,11 +20,14 @@ const Trow = styled.tr`
 `;
 
 const TrowList = styled.tr`
+  background-color: #fff;
   :not(:nth-child(odd)) {
-    background-color: #bebebe;
+    background-color: #cacaca;
   }
 `;
-const Tbody = styled.tbody``;
+const Cell = styled.td`
+  padding: 5px;
+`;
 
 export default function TransactionsHistory({ items }) {
   return (
@@ -37,15 +41,15 @@ export default function TransactionsHistory({ items }) {
           </Trow>
         </Thead>
 
-        <Tbody>
+        <tbody>
           {items.map((item) => (
             <TrowList key={item.id}>
-              <td>{item.type}</td>
-              <td>{item.amount}</td>
-              <td>{item.currency}</td>
+              <Cell>{item.type}</Cell>
+              <Cell>{item.amount}</Cell>
+              <Cell>{item.currency}</Cell>
             </TrowList>
           ))}
-        </Tbody>
+        </tbody>
       </Table>
     </Section>
   );
