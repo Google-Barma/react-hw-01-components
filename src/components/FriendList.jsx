@@ -12,9 +12,9 @@ const Item = styled.li`
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #ffed9a;
+  background-color: #cbffb7;
   box-shadow: 0 0 2px 2px rgba(39, 39, 39, 0.2);
-  cursor: pointer;
+
   transition: transform 0.2s linear;
 
   :not(:last-child) {
@@ -52,7 +52,9 @@ export default function FriendList({ friends }) {
           <Item key={friend.id}>
             <Status isOnline={friend.isOnline}></Status>
             <ImageWrapper>
-              <img src={friend.avatar} width="100" alt={friend.name} />
+              <a href={friend.avatar} target="_blank" rel="noreferrer">
+                <img src={friend.avatar} width="100" alt={friend.name} />
+              </a>
             </ImageWrapper>
             <Name>{friend.name}</Name>
           </Item>
