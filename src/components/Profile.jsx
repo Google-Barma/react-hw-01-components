@@ -89,12 +89,7 @@ export default function Profile({ name, tag, location, avatar, stats }) {
         <Container>
           <Description>
             <ImageWrapper>
-              <ProfileImage
-                src={avatar}
-                alt={name}
-                className="avatar"
-                width="200"
-              />
+              <ProfileImage src={avatar} alt={name} width="200" />
             </ImageWrapper>
 
             <NameTitle>{name}</NameTitle>
@@ -102,7 +97,7 @@ export default function Profile({ name, tag, location, avatar, stats }) {
             <TagText>@{tag}</TagText>
           </Description>
 
-          <List className="stats">
+          <List>
             <ListItem>
               <Label>Followers:</Label>
               <Quantity>{stats.followers}</Quantity>
