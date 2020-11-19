@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   width: 500px;
   margin: 0 auto;
   padding: 15px 0 0 0;
-  box-shadow: 0 0 2px 2px rgba(39, 39, 39, 0.2);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 `;
 
 const MainTitle = styled.h2`

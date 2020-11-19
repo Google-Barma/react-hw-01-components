@@ -4,18 +4,24 @@ import styled from "styled-components";
 const Section = styled.section`
   padding: 20px;
 `;
+
 const List = styled.ul`
   width: 500px;
   margin: 0 auto;
 `;
+
 const Item = styled.li`
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #cbffb7;
-  box-shadow: 0 0 2px 2px rgba(39, 39, 39, 0.2);
-
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 2%,
+    rgba(203, 255, 183, 1) 64%
+  );
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   transition: transform 0.2s linear;
+  border-radius: 15px;
 
   :not(:last-child) {
     margin-bottom: 5px;
@@ -25,12 +31,15 @@ const Item = styled.li`
     transform: translate(0, -10px) scale(1.03);
   }
 `;
+
 const Status = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: ${(props) => (props.isOnline ? "green" : "red")};
   margin-right: 20px;
+  border: 2px solid #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 `;
 
 const ImageWrapper = styled.div`
@@ -40,6 +49,7 @@ const ImageWrapper = styled.div`
   margin-right: 30px;
   overflow: hidden;
 `;
+
 const Name = styled.p`
   font-size: 35px;
 `;
