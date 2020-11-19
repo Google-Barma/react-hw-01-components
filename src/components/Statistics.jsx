@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import propTypes from "prop-types";
 
 const Section = styled.section`
   padding: 20px;
@@ -76,3 +77,14 @@ export default function Statistic({ title, stats }) {
     </Section>
   );
 }
+
+Statistic.propTypes = {
+  title: propTypes.string.isRequired,
+  stats: propTypes.arrayOf(
+    propTypes.exact({
+      id: propTypes.string.isRequired,
+      label: propTypes.string.isRequired,
+      percentage: propTypes.number.isRequired,
+    })
+  ),
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import propTypes from "prop-types";
 
 const Section = styled.section`
   padding: 20px;
@@ -73,3 +74,14 @@ export default function FriendList({ friends }) {
     </Section>
   );
 }
+
+FriendList.propTypes = {
+  friends: propTypes.arrayOf(
+    propTypes.exact({
+      avatar: propTypes.string.isRequired,
+      name: propTypes.string.isRequired,
+      isOnline: propTypes.bool.isRequired,
+      id: propTypes.number.isRequired,
+    })
+  ),
+};

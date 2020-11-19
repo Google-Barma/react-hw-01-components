@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import propTypes from "prop-types";
 
 const Section = styled.section`
   padding: 15px;
@@ -54,3 +55,14 @@ export default function TransactionsHistory({ items }) {
     </Section>
   );
 }
+
+TransactionsHistory.propTypes = {
+  items: propTypes.arrayOf(
+    propTypes.exact({
+      id: propTypes.string.isRequired,
+      type: propTypes.string.isRequired,
+      amount: propTypes.string.isRequired,
+      currency: propTypes.string.isRequired,
+    })
+  ),
+};

@@ -1,3 +1,5 @@
+import React from "react";
+import propTypes from "prop-types";
 import styled from "styled-components";
 
 const Section = styled.section`
@@ -119,3 +121,11 @@ export default function Profile({ name, tag, location, avatar, stats }) {
     </>
   );
 }
+
+Profile.propTypes = {
+  name: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  avatar: propTypes.string.isRequired,
+  stats: propTypes.objectOf(propTypes.number.isRequired),
+};
