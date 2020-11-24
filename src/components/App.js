@@ -5,10 +5,10 @@ import Statistics from "./Statistics";
 import FriendList from "./FriendList";
 import TransactionHistory from "./TransactionHistory";
 
-import user from "../user.json";
-import statisticalData from "../statistical-data.json";
-import friendsList from "../friends.json";
-import transactions from "../transactions.json";
+import user from "../data/user.json";
+import statisticalData from "../data/statistical-data.json";
+import friendsList from "../data/friends.json";
+import transactions from "../data/transactions.json";
 
 const { name, tag, location, avatar, stats } = user;
 
