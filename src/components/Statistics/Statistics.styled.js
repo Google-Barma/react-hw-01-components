@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import propTypes from "prop-types";
 
 const Section = styled.section`
   padding: 20px;
@@ -60,31 +58,4 @@ const Label = styled.span`
   margin-bottom: 5px;
 `;
 
-export default function Statistic({ title, stats }) {
-  return (
-    <Section>
-      <Wrapper>
-        <MainTitle>{title}</MainTitle>
-        <StatsList>
-          {stats.map((stat) => (
-            <StatsItem key={stat.id}>
-              <Label>{stat.label}</Label>
-              <span>{stat.percentage}%</span>
-            </StatsItem>
-          ))}
-        </StatsList>
-      </Wrapper>
-    </Section>
-  );
-}
-
-Statistic.propTypes = {
-  title: propTypes.string.isRequired,
-  stats: propTypes.arrayOf(
-    propTypes.exact({
-      id: propTypes.string.isRequired,
-      label: propTypes.string.isRequired,
-      percentage: propTypes.number.isRequired,
-    })
-  ),
-};
+export { Section, Wrapper, MainTitle, StatsList, StatsItem, Label };
